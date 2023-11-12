@@ -9,14 +9,22 @@
 
   <body>
     
-    <?php
+    <?php 
+    function calcArea(float $r):float {
+      return 3.14159 * $r * $r;
+    }
+
+    function calcCircumference(float $r):float {
+      return 3.14159 * 2.0 * $r;
+    }
+
     $userName = "";
     if ( isset( $_POST['radius'] ) ){
       $radius = $_POST['radius'];
     }
     echo "<h1>For a Circle of Radius ".$radius."</h1>\n";
-    echo "<p>Area = \n";
-    echo "<p>Circumference = \n";
+    echo "<p>Area = ". calcArea($radius) ."\n";
+    echo "<p>Circumference = ". calcCircumference($radius) ."\n";
     ?>
     
   </body>

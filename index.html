@@ -1,4 +1,4 @@
-<!DOCTYPE HTML>
+<!DOCTYPE html>
 <html>
   <head>
     <title>Circle Calculator</title>
@@ -13,20 +13,22 @@
   <body>
   
     <form name="myForm" action="handler.php" method="post">
-      Radius: <input type="text" name="radius"> <br>
-      <input type="submit">
+
+      <!-- mdl textfield -->
+      <div class="mdl-textfield mdl-js-textfield">
+        <label class="mdl-textfield__label" for="radius">Enter the Radius of your circle</label>
+        <input class="mdl-textfield__input" type="text" name="radius" id="radius" pattern="[0-9]*(\.[0-9]+)?">
+        <span class="mdl-textfield__error">Numbers and decimal only</span>
+      </div>
+
+      <!-- Accent-colored raised button with ripple -->
+      <button class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--primary">
+        Enter
+      </button>
+
+      <p>
+        <img src=./images/circles.png alt="Circles">
+      </p>
     </form>
-
-    <!-- Accent-colored raised button with ripple -->
-    <button class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--primary">
-      Enter
-    </button>
-
-    <!-- mdl textfield -->
-    <div class="mdl-textfield mdl-js-textfield">
-	  <label class="mdl-textfield__label" for="diameter">Enter the Diameter of your circle</label>
-	  <input class="mdl-textfield__input" type="text" id="diameter" pattern="[0-9,.]*">
-	  <span class="mdl-textfield__error">Numbers and decimal only</span>
-	</div>
 	  
 </html>
