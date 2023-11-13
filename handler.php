@@ -23,7 +23,8 @@
       $diameter = $_POST['diameter'];
       $radius = $diameter / 2.0;
     }
-    echo "<h1>For a Circle of Radius ".$radius."</h1>\n";
+    echo "<h1>For a Circle of Diameter ".$diameter."</h1>\n";
+    echo "<p>Radius = ".$radius."\n";
     echo "<p>Area = ". calcArea($radius) ."\n";
     echo "<p>Circumference = ". calcCircumference($radius) ."\n";
     ?>
