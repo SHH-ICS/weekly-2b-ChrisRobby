@@ -4,7 +4,7 @@
     <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
     <link rel="stylesheet" href="https://code.getmdl.io/1.3.0/material.indigo-pink.min.css">
     <script defer src="https://code.getmdl.io/1.3.0/material.min.js"></script>
-    <title>Welcome Page</title>
+    <title>Results Page</title>
   </head>
 
   <body>
@@ -19,14 +19,19 @@
     }
 
     $userName = "";
-    if ( isset( $_POST['radius'] ) ){
-      $radius = $_POST['radius'];
+    if ( isset( $_POST['diameter'] ) ){
+      $diameter = $_POST['diameter'];
+      $radius = $diameter / 2.0;
     }
     echo "<h1>For a Circle of Radius ".$radius."</h1>\n";
     echo "<p>Area = ". calcArea($radius) ."\n";
     echo "<p>Circumference = ". calcCircumference($radius) ."\n";
     ?>
-    
+
+    <p>
+      <img src=./images/circles.png alt="Circles">
+    </p>
+
   </body>
   
 </html>
